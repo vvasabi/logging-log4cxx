@@ -170,4 +170,5 @@ liblog4cxx_la_SOURCES = \
         zipcompressaction.cpp
 
 AM_CPPFLAGS += @CPPFLAGS_ODBC@
-liblog4cxx_la_LDFLAGS = -version-info @LT_VERSION@ @LIBS_ODBC@ -@APR_LIBS@
+liblog4cxx_la_LDFLAGS = -version-info @LT_VERSION@ -no-undefined
+liblog4cxx_la_LIBADD = @LIBS_ODBC@ @APR_LIBS@ @APU_LIBS@
